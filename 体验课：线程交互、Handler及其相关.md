@@ -1,5 +1,5 @@
-#体验课：线程交互、Handler及其相关
-##线程的终结
+# 体验课：线程交互、Handler及其相关
+## 线程的终结
 * thread.stop()
 	* 立即终止当前线程
 	* 已经被废弃，不建议使用
@@ -48,7 +48,7 @@
                 }
             }
 
-##wait/notify
+## wait/notify
 * wait/notify一般配合synchronized关键字使用
 * wait使当前线程被阻塞，并把锁释放出来，在遇到notify时才会被唤醒并继续执行接下来的代码
 * 由于 wait()、notify/notifyAll() 在synchronized 代码块执行，说明当前线程一定是获取了锁的。
@@ -56,11 +56,11 @@
 	* 只有当 notify/notifyAll() 被执行时候，才会唤醒一个或多个正处于等待状态的线程，然后继续往下执行，直到执行完synchronized 代码块的代码或是中途遇到wait() ，再次释放锁。
 * 由于notify只会唤醒一个线程，所以一般使用notifyAll来唤醒所有等待的线程
 
-##join/yield
+## join/yield
 * join 是将两个并行的线程串连起来，使一个线程的事情做完后再做join()之后的事情
 * yield是将当前线程的时间片分出去一下
 
-##Handler机制
+## Handler机制
 * HandlerThread
 	* run
 	* Looper.prepare() //创建looper对象，并将其保存在ThreadLocal中，可以使每个不同的thread中都有各自的looper对象
@@ -70,7 +70,7 @@
 * Handler
 	* 添加消息、制定消息的处理方案
 
-##AsyncTask/Handler内存泄漏
+## AsyncTask/Handler内存泄漏
 * 内存泄漏的原因并不是内部类会持有外部类的引用，而是根据有没有GCRoot指向当前对象来判断的:
 		此段代码也有外部类的引用，但并不会引起内存泄漏
 
@@ -90,7 +90,7 @@
 	* 使用软引用，配合static关键字
 * 总之，引用不是问题，耗时操作才是问题
 
-##Service、IntentService、Executors、HandlerThread、AsyncTask/Handler的使用场景
+## Service、IntentService、Executors、HandlerThread、AsyncTask/Handler的使用场景
 * Executors
 	* 官方推荐的线程池管理工具，可用来生成多线程池或单线程池
 	* newSingleThreadExecutor创建一个单线程化的线程池

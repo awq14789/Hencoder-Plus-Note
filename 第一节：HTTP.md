@@ -1,5 +1,5 @@
-#第一节：HTTP
-##http请求
+# 第一节：HTTP
+## http请求
 * GET
 * POST
 * PUT
@@ -8,7 +8,7 @@
 	* 请求只把header返回，不返回body/content
 	* 经常用于文件下载，在下载前先调用一下，获取需要下载的文件的属性
 
-##状态码
+## 状态码
 作用：对结果做出类型化描述（如“获取成功”、“内容未找到”）
 * 1xx: 临时性消息
 	* 100：分段请求时会返回
@@ -21,7 +21,7 @@
 * 4xx: 客户端错误（请求端错误）
 * 5xx: 服务器错误
 
-##Header
+## Header
 作用： HTTP消息的元数据（metadata）
 * Host:服务器主地址
 * Content-Length：内容的长度
@@ -49,13 +49,13 @@
 * Cookie/Set-Cookie:发送Cookie/设置Cookie
 * Authorization:授权信息
 
-####部分其他header
+#### 部分其他header
 * Accept:客户端能接受的数据类型。如 text/html
 * Accept-Charset:客户端接受的字符集。如utf-8
 * Accept-Encoding:客户端接受的压缩编码类型。如gzip
 * Content-Encoding:压缩类型。如gzip
 
-##Cache
+## Cache
 * cache与buffer的区别
 	* cache是缓存，就是把已经加载过的东西存起来
 	* buffer是缓冲，就是预加载，比如看视频时的预加载
